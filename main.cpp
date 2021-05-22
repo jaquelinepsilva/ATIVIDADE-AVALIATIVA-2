@@ -19,23 +19,32 @@ void troca1(char *ponteiro, char mud1, char mud2, char *p){
           troca++;
         }  
     }
-     cout << nv<<"\n";
-  cout << ponteiro;
+  cout << "\n";
+  cout << "SAÏDA" << endl;
+  cout <<"\n" << nv <<"\n";
+  cout << ponteiro << endl;
+  cout<< troca;
 }
 
 
 
 int main() {
+cout << "ENTRADA"<< "\n"<< endl;
 
-cout << "DIGITE A PALAVRA ESCOLHIDA:" << endl;
+cout << "DIGITE UMA PALAVRA (SOMENTE EM LETRA MAIUSCULA OU MINUSCULA):" << endl;
   cin.getline(palavra,100);
   tamanho = strlen(palavra);  
-cout << "ESCOLHA A LETRA A SUBSTITUIR?" << endl;
+
+cout << "DIGITE UM CARACTER A SER SUBSTITUIDO!" << endl;
   cin >> mud1;
 
-cout << "ESCOLHA A LETRA A FICAR NO LUGAR?" << endl;
+cout << "DIGITE UM CARACTER A SER COLOCADO NO LUGAR DO ANTERIOR!" << endl;
   cin >> mud2;
 
+for(int i = 0; i < tamanho; i++)
+{
+    nv[i] = palavra[i];  
+}
 troca1(palavra, mud1, mud2, nv);
 
 }
